@@ -106,7 +106,7 @@ const List = () => {
 
   return (
     <div className='pt-5 pl-10 pr-10 pb-5'>
-      <div className='h-10 flex items-center justify-between w-full mb-5 gap-8'>
+      <div className='h-10 flex items-center justify-between w-full mb-5 gap-8  '>
         <div className='flex h-full  items-center gap-2 flex-[2] w-full'>
           <InputComponent
             inputValue={inputValue}
