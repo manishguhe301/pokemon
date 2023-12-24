@@ -23,13 +23,13 @@ const Card = ({ pokemon, id }) => {
       <img
         className='w-full h-48 object-contain'
         src={`https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${
-          id + 1
+          details.id
         }.svg`}
         alt={name}
       />
       <div className='px-6 py-4'>
         <div className='font-bold text-xl mb-2 capitalize'>{name}</div>
-        <p className='text-gray-700 text-base'>ID: {id + 1}</p>
+        <p className='text-gray-700 text-base'>ID: {details.id}</p>
         <p className='text-gray-700 text-base capitalize'>
           Type:{' '}
           {details.types && details.types.map((t) => t.type.name).join(', ')}

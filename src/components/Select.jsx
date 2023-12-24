@@ -1,16 +1,29 @@
 import { Select, MenuItem, FormControl, InputLabel } from '@mui/material';
+import { useEffect, useState } from 'react';
 
-const SelectComponent = ({ type, setType }) => { 
+const SelectComponent = ({ type, setType }) => {
+  const [internalType, setInternalType] = useState('');
+
+  useEffect(() => {
+    setInternalType(type);
+  }, [type]);
 
   const handleChange = (event) => {
-    setType(event.target.value);
+    const selectedType = event.target.value;
+    setType(selectedType);
+    setInternalType(selectedType);
   };
 
   return (
     <div className='w-full'>
-      <FormControl sx={{width:'100%'}}>
-        <InputLabel id="demo-simple-select-label">Select Type</InputLabel>
-        <Select labelId="demo-simple-select-label" value={type} onChange={handleChange} label="Select Type">
+      <FormControl sx={{ width: '100%' }}>
+        <InputLabel id='demo-simple-select-label'>Select Type</InputLabel>
+        <Select
+          labelId='demo-simple-select-label'
+          value={internalType}
+          onChange={handleChange}
+          label='Select Type'
+        >
           <MenuItem value='normal'>Normal</MenuItem>
           <MenuItem value='fire'>Fire</MenuItem>
           <MenuItem value='water'>Water</MenuItem>
@@ -29,7 +42,7 @@ const SelectComponent = ({ type, setType }) => {
           <MenuItem value='dark'>Dark</MenuItem>
           <MenuItem value='steel'>Steel</MenuItem>
           <MenuItem value='fairy'>Fairy</MenuItem>
-          <MenuItem value='stellar'>Stellar</MenuItem>
+          <MenuItem value='shadow'>Shadow</MenuItem>
         </Select>
       </FormControl>
     </div>
