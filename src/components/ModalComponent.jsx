@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledImage = styled.img`
   @media (max-width: 500px) {
-    max-height: 100px;
+    max-height: 128px;
   }
 `;
 
