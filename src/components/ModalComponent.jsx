@@ -1,4 +1,11 @@
 import { Box, Modal, Button } from '@mui/material';
+import styled from 'styled-components';
+
+const StyledImage = styled.img`
+  @media (max-width: 500px) {
+    max-height: 100px;
+  }
+`;
 
 const BarChart = ({ stats }) => {
   return (
@@ -60,7 +67,7 @@ const ModalComponent = ({ showModal, closeModal, details }) => {
         className='absolute top-2/4 left-2/4 trans w-[800px] bg-[#f5f5f5] border-[#ffcb05] outline-none shadow h-[500px] p-5 flex flex-row justify-between md:w-[90%] sm:w-[90%]  '
       >
         <div className='flex-1'>
-          <img
+          <StyledImage
             className='object-contain w-full max-h-[300px]'
             src={`https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${details.id}.svg`}
             alt={details.id}
