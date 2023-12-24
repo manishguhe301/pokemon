@@ -9,7 +9,7 @@ import InputComponent from './Input';
 const List = () => {
   const [pokemons, setPokemons] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [limit, setLimit] = useState(6);
+  const [limit, setLimit] = useState(18);
   const [type, setType] = useState('');
   const [inputValue, setInputValue] = useState('');
 
